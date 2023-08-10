@@ -1,6 +1,7 @@
 // external import
 const Product=require('../model/productModel')
 
+// add a new product
 const addProduct=async(req,res)=>{
     try{
         const product=await Product.create({...req.body});
@@ -11,9 +12,11 @@ const addProduct=async(req,res)=>{
       })
     }
 }
+
+// get all products
 const getAllProducts=async(req,res)=>{
   try{
-    const products=Product.find({}).sort({createAt:-1})
+    const products=await Product.find({}).sort({ createdAt: -1 });
     res.status(200).json(products)
   }catch(error){
     res.status(500).json({

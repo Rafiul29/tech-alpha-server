@@ -11,6 +11,6 @@ const route=express.Router();
 route.post("/",addProduct)
 
 // get all products
-route.post("/",getAllProducts)
+route.get("/",getAllProducts)
 
 module.exports=route;
