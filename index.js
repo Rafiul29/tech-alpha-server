@@ -18,7 +18,7 @@ app.use(cors());
 
 
 // bypass api
-app.use("/api/product",productRoutes);
+app.use("/api/products",productRoutes);
 
 // database configuration
 mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true})
