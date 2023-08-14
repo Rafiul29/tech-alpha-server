@@ -5,11 +5,11 @@ Discover Tech Alpha, where shopping meets innovation. Our MERN backend, fueled b
 
 ## Features
 
-- Dedicated Cart Page: Users can easily add products to their cart on a dedicated page, providing a smooth and intuitive shopping process
 - State management using Redux Toolkit
 - Fetches product data using Redux thunk.
+- A shopping cart that uses Redux Toolkit for state management.
+- The cart items are saved in the client's browser local storage
 - Styling using Tailwind CSS
-
 
 ## Tools Used
 
