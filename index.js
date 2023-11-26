@@ -5,6 +5,8 @@ const cors=require("cors");
 
 // internal import
 const productRoutes=require("./routes/productRoutes")
+const stripeRotues=require("./routes/stripe")
+
 
 const app = express();
 
@@ -19,7 +21,7 @@ app.use(cors());
 
 // bypass api
 app.use("/api/products",productRoutes);
-
+app.use("/api/stripe",stripeRotues)
 // database configuration
 mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true})
 .then(()=>{
